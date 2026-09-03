@@ -18,10 +18,10 @@ This lab deploys a Splunk Indexer/Search Head on an Ubuntu Server VM and a Splun
 
 
 ### Splunk Enterprise Installation (Ubuntu Server)
-
+<br>![Preview Failed](Splunk_download.png)<br>
 
 ### Universal Forwarder Installation (Windows 10)
-
+<br>![Preview Failed](Universal_Forwarder_download.png)<br>
 
 ## Detection Queries & Alerts
 
@@ -45,7 +45,7 @@ A classic dashboard was built with 5 panels:
    | stats count(eval(EventCode=4624)) as Successful_Logins,
            count(eval(EventCode=4625)) as Failed_Logins by user
    ```
-
+<br>![Preview Failed](Dashboard.png)<br>
 ## Skills Demonstrated
 
 - Deployment and configuration of a Splunk Indexer/Search Head and Universal Forwarder
