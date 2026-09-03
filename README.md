@@ -6,17 +6,6 @@ A hands-on home lab simulating SOC (Security Operations Center) monitoring using
 
 This lab deploys a Splunk Indexer/Search Head on an Ubuntu Server VM and a Splunk Universal Forwarder on a Windows 10 VM to forward Windows Security, Application, and System event logs (including Sysmon telemetry). The logs are parsed, queried with SPL, and used to build detections for common attacker behaviors, brute-force login attempts, new local user account creation, and suspicious PowerShell execution.
 
-## Architecture
-
-```
-┌─────────────────────┐         ┌──────────────────────────┐
-│   Windows 10 VM      │  9997   │   Ubuntu Server VM        │
-│  (Universal Forwarder)├────────►│  (Splunk Indexer/Search   │
-│  - Security logs      │  TCP    │   Head)                   │
-│  - Application logs   │         │  - index: windows         │
-│  - System logs         │        │  - Web UI: :8000          │         
-└─────────────────────┘            └──────────────────────────┘
-```
 
 ## Components
 
